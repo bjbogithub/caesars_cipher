@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Caesars Cipher Converter</title>
         <link rel="stylesheet" href="index.css">
     </head>
@@ -9,15 +11,16 @@
         <h3>Description</h3>
         <p> <!-- Add an anchor/link to wikipedia in the description-->
             Input letters into the input field and press submit. The JavaScript code that I have 
-             made will convert the letters using <strong><a href="https://en.wikipedia.org/wiki/ROT13">ROT13.</a></strong></p> 
+             made will convert the letters using <strong><a href="https://en.wikipedia.org/wiki/ROT13">ROT13.</a></strong>
+        </p> 
         <p>     
             NB: Only uppercase letters are allowed. 
         </p>
         <form>
             <label for="Input">Input</label>
-            <input type="text" id="input"> 
+            <input type="text" id="input" required> 
             <!-- Adding the submit putton that activate the rot 13 converter javascript function when clicked -->
-            <input type="submit" value="Submit" onclick="rot13(); return false;"/>
+            <button type="button" onclick="rot13()">Submit</button>
         </form>
         <p id="output"></p>
         <!-- Here comes the external javascript import -->
