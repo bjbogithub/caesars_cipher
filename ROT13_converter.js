@@ -1,17 +1,44 @@
 function rot13() {
-  let str = document.getElementById("input").value;
-  let lettersA2M = "ABCDEFGHIJKLM";
-  let lettersN2Z = "NOPQRSTUVWXYZ";
-  let decodedString = "";
-  for (let i = 0; i < str.length; i++) {
-      if (str[i].match(/[A-M]/)) {
-          decodedString += lettersN2Z[lettersA2M.indexOf(str[i])];
-      } else if (str[i].match(/[N-Z]/)) {
-          decodedString += lettersA2M[lettersN2Z.indexOf(str[i])];
-      } else {
-          decodedString += str[i];
-      }
-  }
-  let palindrome_answer2= decodedString;
-  document.getElementById('output').innerHTML = palindrome_answer2;
+    var letters = {
+        'N':'A',
+        'O':'B',
+        'P':'C',
+        'Q':'D',
+        'R':'E',
+        'S':'F',
+        'T':'G',
+        'U':'H',
+        'V':'I',
+        'W':'J',
+        'X':'K',
+        'Y':'L',
+        'Z':'M',
+        'A':'N',
+        'B':'O',
+        'C':'P',
+        'D':'Q',
+        'E':'R',
+        'F':'S',
+        'G':'T',
+        'H':'U',
+        'I':'V',
+        'J':'W',
+        'K':'X',
+        'L':'Y',
+        'M':'Z',
+        '?':'?',
+        '!':'!',
+        '.':'.',
+        ' ':' '
+    };
+    var strOut = '';
+    var newStr;
+    var str = document.getElementById("input").value;
+    for(var i =0; i < str.length; i++){
+      newStr = letters[str[i]];
+      strOut += newStr;
+    }
+    document.getElementById('output').innerHTML = strOut;
 }
+
+
