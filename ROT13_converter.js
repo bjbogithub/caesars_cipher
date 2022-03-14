@@ -13,7 +13,7 @@ function rot13() {
       }
     }
   }
-  document.getElementById("output").innerHTML = newStr.join("");
+  document.getElementById("output").innerHTML = "ROT13 convertion:" + newStr.join("");
 
 }
 
